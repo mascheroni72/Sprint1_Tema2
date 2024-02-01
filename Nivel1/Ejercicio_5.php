@@ -7,7 +7,7 @@
 </head>
 <body>
  <?php
- function formacion ($nota){
+/* function formacion ($nota){
 
     if ($nota >=60){
         $grado = "Tienes un nivel para primera división";
@@ -22,7 +22,24 @@
 }    
     $nota = 72;
     
-     echo  formacion($nota) ."<br>";
+     echo  formacion($nota) ."<br>"; */
+
+     function calificar (int $nota){
+
+        if ($nota >=60){
+            $grado = "Tienes un nivel para primera división";
+            }else if ($nota >= 45){
+                $grado = "Tu nivel es de segunda división";
+            }else if ($nota >= 33){
+                $grado = "Tu nivel se corresponde con la tercera división";
+            }else if ($nota <33){
+                $grado = "Has suspendido";
+            }
+            return $grado;
+    }    
+        $nota = 47;
+        
+         echo  calificar ($nota) ."<br>";
  ?>
 </body>
 </html>
